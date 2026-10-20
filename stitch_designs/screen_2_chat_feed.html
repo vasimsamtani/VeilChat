@@ -1,0 +1,210 @@
+<!-- Screen 2: Unified Veiled Chat Feed (Liquid Glass) -->
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#003824", "on-surface-variant": "#cbc3d7", "inverse-on-surface": "#2e3037", "primary-fixed": "#e9ddff", "surface-container-highest": "#33343b", "on-primary-container": "#340080", "secondary-fixed-dim": "#4cd7f6", "on-error-container": "#ffdad6", "primary": "#d0bcff", "on-secondary": "#003640", "tertiary-fixed-dim": "#4edea3", "outline-variant": "#494454", "inverse-primary": "#6d3bd7", "on-primary": "#3c0091", "primary-container": "#a078ff", "error-container": "#93000a", "surface-tint": "#d0bcff", "surface-dim": "#111319", "tertiary-container": "#00a572", "on-background": "#e2e2eb", "surface": "#111319", "surface-bright": "#373940", "on-tertiary-container": "#00311f", "error": "#ffb4ab", "tertiary-fixed": "#6ffbbe", "secondary": "#4cd7f6", "on-secondary-fixed-variant": "#004e5c", "on-secondary-container": "#00424e", "surface-container-high": "#282a30", "surface-container": "#1e1f26", "secondary-fixed": "#acedff", "secondary-container": "#03b5d3", "surface-variant": "#33343b", "tertiary": "#4edea3", "on-error": "#690005", "outline": "#958ea0", "background": "#111319", "on-tertiary-fixed-variant": "#005236", "on-secondary-fixed": "#001f26", "surface-container-lowest": "#0c0e14", "on-primary-fixed": "#23005c", "on-primary-fixed-variant": "#5516be", "inverse-surface": "#e2e2eb", "on-tertiary-fixed": "#002113", "on-surface": "#e2e2eb", "surface-container-low": "#191b22", "primary-fixed-dim": "#d0bcff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-2xs": "0.125rem", "margin-desktop": "3rem", "space-md": "1rem", "space-sm": "0.5rem", "space-2xl": "3rem", "space-3xl": "4.5rem", "gutter-desktop": "1.5rem", "gutter": "1rem", "margin": "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin-tablet": "2rem", "space-lg": "1.5rem" }, fontFamily: { "label-caps": ["Inter"], "headline-lg-mobile": ["Inter"], "label-mono-sm": ["JetBrains Mono"], "body-lg": ["Inter"], "display-hero-mobile": ["Inter"], "display-hero": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "label-mono-md": ["JetBrains Mono"], "headline-sm": ["Inter"], "body-sm": ["Inter"] }, fontSize: { "label-caps": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-mono-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "display-hero-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "display-hero": ["48px", { "lineHeight": "54px", "letterSpacing": "-0.04em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "label-mono-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 pt-safe bg-surface/75 backdrop-blur-2xl shadow-[0_1px_12px_rgba(0,0,0,0.4)]"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Feed</span><span class="material-symbols-outlined text-secondary text-[16px]">lock</span></div></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 px-space-md bg-surface min-h-screen"><div class="flex flex-col w-full gap-space-md">
+<!-- Interactive Stealth & Encryption Ambient Strip -->
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="relative flex items-center justify-center w-2.5 h-2.5">
+<span class="absolute inline-flex w-full h-full rounded-full opacity-75 animate-ping bg-tertiary"></span>
+<span class="relative inline-flex w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">SECURE CHANNEL • SHIELD ACTIVE</span>
+</div>
+<div class="flex items-center gap-space-2xs bg-surface-container-low px-space-sm py-space-2xs rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-tertiary">verified_user</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">AES-GCM-256</span>
+</div>
+</div>
+<!-- Sub-header Filter Row with Segmented Pills & Stealth Toggle -->
+<div class="flex items-center justify-between gap-space-sm pt-space-2xs">
+<div class="flex items-center gap-space-xs overflow-x-auto scrollbar-none py-space-2xs">
+<!-- Active Pill -->
+<button class="flex items-center gap-space-2xs px-space-md py-space-xs rounded-full bg-primary text-on-primary shadow-md transition-all active:scale-95" type="button">
+<span class="font-headline-sm text-headline-sm">All</span>
+<span class="font-label-mono-sm text-label-mono-sm bg-on-primary/20 px-1.5 py-0.5 rounded-full">14</span>
+</button>
+<!-- Locked Pill -->
+<button class="flex items-center gap-space-2xs px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-[14px] text-secondary">lock</span>
+<span class="font-body-md text-body-md font-medium">Locked</span>
+<span class="font-label-mono-sm text-label-mono-sm bg-surface-container-highest px-1.5 py-0.5 rounded-full text-secondary">2</span>
+</button>
+<!-- Unread Pill -->
+<button class="flex items-center gap-space-2xs px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all active:scale-95" type="button">
+<span class="font-body-md text-body-md font-medium">Unread</span>
+</button>
+</div>
+<!-- Ghost Mode Stealth Switch -->
+<div class="flex items-center gap-space-xs shrink-0 pl-space-xs">
+<button aria-label="Toggle Ghost Mode" class="flex items-center gap-space-2xs px-space-sm py-space-xs rounded-full bg-surface-container-high text-on-surface-variant hover:text-secondary transition-all active:scale-95" id="stealth-toggle" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility_off</span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Stealth</span>
+</button>
+</div>
+</div>
+<!-- Chat List Container -->
+<div class="flex flex-col gap-space-xs mt-space-2xs">
+<!-- Chat 1: Normal - David Clark -->
+<div class="group relative flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer shadow-sm active:scale-[0.99]">
+<div class="relative shrink-0 w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Portrait photography of David Clark, a professional product architect in a modern obsidian dark studio with ultra soft cool rim lighting, crisp focus, hyper-realistic, dark aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDSoVCcWoeaIrGh3Xez-pwUMUNQZJsMPxcROb2uun6JTTeOFndw99HDLHEWy0NIqtjYWyjSxbWekPP_WnqJb3EGapGxtMyXSJKMw0BELd-zyN05gziQX3NY5jQ3xKkK2708J86KUgIZxFx4zeq3xSfezgDutp9Bil13zTfh9ZcxLIlQKHCkwPBL50F9sYtR0z4qUIIBuriH0jHQHqP27q6wXX-CtJ4P5lDTah5gEz5N8qoFMI5y-_h"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-tertiary rounded-full ring-2 ring-surface-container-low"></span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-space-2xs">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">David Clark</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant shrink-0">2:41 PM</span>
+</div>
+<div class="flex items-center justify-between gap-space-xs">
+<p class="font-body-md text-body-md text-on-surface-variant truncate">Let's meet at 5 PM</p>
+<div class="flex items-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[16px]">done_all</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Chat 2: Hero Locked Chat - Sarah Miller (High Luxury Vault) -->
+<div class="relative flex flex-col p-space-md rounded-xl bg-surface-container shadow-md transition-all active:scale-[0.99] cursor-pointer overflow-hidden">
+<!-- Ambient Violet/Amber Refraction Glow -->
+<div class="absolute -top-12 -right-12 w-36 h-36 bg-primary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center gap-space-md">
+<!-- Avatar with subtle gold / luminous aura -->
+<div class="relative shrink-0 w-12 h-12 rounded-full p-[2px] bg-gradient-to-tr from-secondary-fixed to-primary">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Editorial close-up portrait of Sarah Miller, confident executive, cinematic neon twilight reflections, sleek minimal styling, deep atmospheric shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgVqxoMrvnFnA0THKci2zSVN-qQvyHWuFyww58VWi3QtMDZQGxJ-9NLQIfW1d1de82wHgitmzqH4IhtYkWvqVosEfVQlL7vB7w5K9bJ9uuX_6USAxLrnJ5K-5DWHbFscNgHMxhzMHAHeUkBRIYpWsNcyXnWb85EKpHchMNQ7oDADcglPH1jc2zOvrSZizxLWoUkdwg0NBfmD8QncNtAGCMykcYnYpkx94sAEeeO8F7kvr7gC30igqo"/>
+</div>
+<span class="absolute -top-1 -right-1 flex items-center justify-center w-4 h-4 rounded-full bg-secondary text-on-secondary">
+<span class="material-symbols-outlined text-[10px]">shield</span>
+</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-space-2xs">
+<div class="flex items-center gap-space-xs truncate">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Sarah Miller</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed/20 text-secondary font-label-mono-sm text-label-mono-sm shrink-0">Vault</span>
+</div>
+<div class="flex items-center gap-space-2xs shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+<span class="font-label-mono-sm text-label-mono-sm">1:15 PM</span>
+</div>
+</div>
+<!-- Liquid Glass Redacted Waveform Pill -->
+<div class="relative flex items-center justify-between gap-space-sm px-space-sm py-space-xs rounded-lg bg-surface-container-highest/80 backdrop-blur-md overflow-hidden mt-space-2xs">
+<!-- Shimmer Bar -->
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent -translate-x-full animate-[shimmer_2.5s_infinite]"></div>
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">fingerprint</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate font-medium">Tap to unlock conversation</span>
+</div>
+<!-- Redacted Audio Wave Bars Animation -->
+<div class="flex items-center gap-0.5 shrink-0 h-4 px-1">
+<span class="w-0.5 h-2 bg-secondary rounded-full animate-pulse"></span>
+<span class="w-0.5 h-3.5 bg-primary rounded-full animate-pulse [animation-delay:150ms]"></span>
+<span class="w-0.5 h-1.5 bg-secondary-fixed rounded-full animate-pulse [animation-delay:300ms]"></span>
+<span class="w-0.5 h-4 bg-primary-fixed rounded-full animate-pulse [animation-delay:450ms]"></span>
+<span class="w-0.5 h-2 bg-secondary rounded-full animate-pulse [animation-delay:200ms]"></span>
+</div>
+</div>
+<!-- Whisper Text Footer -->
+<div class="flex items-center gap-space-xs mt-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[12px] text-tertiary">check_circle</span>
+<span class="font-label-mono-sm text-label-mono-sm">Biometric Secured • Hardware E2EE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Chat 3: Normal - Alex Rivera -->
+<div class="group relative flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer shadow-sm active:scale-[0.99]">
+<div class="relative shrink-0 w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Intense portrait of Alex Rivera, lead developer, dark tech studio background, cool monochrome tone with subtle purple cyan screen reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3xQKbfxst_UZFOojDBG9OcjRzKre8fN83sKYdyoN1RagYu2QAJ6lSFyxAYY2Pm578NcZnT---j5N05LIbVj9gHukmQ0Ak5-RlWTnUm8_F8xAzwrKixhB8ViJFr9Euk02eHgCpZiFQMxwKDuDbQ5uLrB1F9p7ttq1Go03zHQmg4tznOcnlNyjLEblxbUCYfA3P3c3OUmCfYlWbHTuLspmY3mHE1L2eOqE3ssEskkniDxJaDOGc0Zs3"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-space-2xs">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Alex Rivera</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant shrink-0">11:04 AM</span>
+</div>
+<div class="flex items-center justify-between gap-space-xs">
+<p class="font-body-md text-body-md text-on-surface-variant truncate">Got the updated files, reviewing now</p>
+<div class="flex items-center shrink-0 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">volume_off</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Chat 4: Protected Chat - Dr. Emily Chen -->
+<div class="group relative flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer shadow-sm active:scale-[0.99]">
+<div class="relative shrink-0 w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Sophisticated portrait of Dr. Emily Chen in obsidian minimalist lab setting, subtle ambient rim lighting, focused intellectual expression, ultra-refined dark tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF8uxTIMFl4-nGYGXojvd5B2maViDxwb2sdW_ywYUh6jOcDsz9ZhGvr_Sr8QCaJRfUB1DnL8rZkfVeeOjxTYWqvSiXJZ2_qxVTO6FJaNcktdTjBXww-Nop3I9Ri1l0goPm80NISomU-cjt3joshqJvaqiw75mQNwIOTJq9j4TxRn6ACfS7jRJ6EjK7wMgebtzLyf08br0ThXQBgCTD8JygOSIjxQ7Bvu6dNccy3nNOj3Fu9Vp6u9ll"/>
+<div class="absolute inset-0 bg-surface-dim/40 backdrop-blur-[2px] flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-primary">lock</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-space-2xs">
+<div class="flex items-center gap-space-xs truncate">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Dr. Emily Chen</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant shrink-0">Yesterday</span>
+</div>
+<!-- Redacted Liquid Glass Pill -->
+<div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface-container-highest/60 text-on-surface">
+<div class="flex items-center gap-space-xs truncate">
+<span class="material-symbols-outlined text-primary text-[15px] shrink-0">lock</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Tap to unlock conversation</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase text-[10px]">AUTH</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Hardware Enclave Status Card at Bottom -->
+<div class="relative flex items-center justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-md overflow-hidden mt-space-xs">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-tertiary-container/30 shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[18px]">memory</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-mono-md text-label-mono-md text-on-surface tracking-tight truncate">Zero-Knowledge Enclave</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Keys never transit external servers</span>
+</div>
+</div>
+<button class="shrink-0 px-space-sm py-1 rounded-full bg-surface-container-high text-primary hover:text-on-surface font-label-mono-sm text-label-mono-sm transition-colors active:scale-95" type="button">
+      Audit
+    </button>
+</div>
+<!-- Floating Action Button (FAB) Anchor -->
+<div class="fixed bottom-24 right-space-md z-40 pointer-events-auto">
+<button aria-label="Compose Encrypted Message" class="relative group flex items-center justify-center w-14 h-14 rounded-full bg-primary-container text-on-primary shadow-xl hover:shadow-[0_0_30px_-5px_rgba(160,120,255,0.6)] active:scale-90 transition-all" type="button">
+<!-- Ambient Bloom Glow -->
+<span class="absolute inset-0 rounded-full bg-primary opacity-40 blur-lg group-hover:opacity-75 transition-opacity pointer-events-none"></span>
+<span class="material-symbols-outlined text-[28px] relative z-10">edit</span>
+</button>
+</div>
+</div>
+<script>
+  (function initVeiledChatInteractions() {
+    const stealthBtn = document.getElementById('stealth-toggle');
+    if (stealthBtn) {
+      stealthBtn.addEventListener('click', () => {
+        const isDimmed = stealthBtn.classList.toggle('bg-secondary');
+        stealthBtn.classList.toggle('text-on-secondary');
+        const icon = stealthBtn.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.textContent = isDimmed ? 'visibility' : 'visibility_off';
+        }
+      });
+    }
+  })();
+</script></main><div class="fixed bottom-0 inset-x-0 z-50 pointer-events-none pb-safe px-space-md mb-space-sm"><nav class="pointer-events-auto mx-auto max-w-sm rounded-full bg-surface-container-low/85 backdrop-blur-2xl px-space-sm py-space-xs shadow-[0_12px_32px_-4px_rgba(0,0,0,0.7)] flex items-center justify-around" data-active-classes="text-primary font-semibold"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-2xs transition-colors text-primary font-semibold" data-path="feed" href="#"><span class="material-symbols-outlined text-[22px]">chat_bubble</span><span class="font-label-caps text-label-caps">Chats</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="vault" href="#"><span class="material-symbols-outlined text-[22px]">shield</span><span class="font-label-caps text-label-caps">Vault</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="camouflage" href="#"><span class="material-symbols-outlined text-[22px]">visibility_off</span><span class="font-label-caps text-label-caps">Camouflage</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[22px]">settings</span><span class="font-label-caps text-label-caps">Settings</span></a></nav></div></body></html>
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-19T16:59:38+05:30.
+</ADDITIONAL_METADATA>
