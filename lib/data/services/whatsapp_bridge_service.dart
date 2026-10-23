@@ -35,10 +35,10 @@ class WhatsAppBridgeService extends ChangeNotifier {
   String? _lastError;
 
   WhatsAppBridgeService({
-    String bridgeUrl = defaultBridgeUrl,
+    this._bridgeUrl = defaultBridgeUrl,
     ChatSecurityService? securityService,
     bool autoConnect = true,
-  }) : _bridgeUrl = bridgeUrl {
+  }) {
     _securityService = securityService;
     if (autoConnect) {
       connect();

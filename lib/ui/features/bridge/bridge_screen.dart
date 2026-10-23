@@ -1,4 +1,3 @@
-import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
@@ -553,62 +552,4 @@ class _BridgeScreenState extends State<BridgeScreen>
       ),
     );
   }
-}
-
-class _QrMatrixPainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = Colors.black
-      ..style = PaintingStyle.fill;
-
-    // Corner Finder Patterns
-    _drawFinderPattern(canvas, 10, 10, paint);
-    _drawFinderPattern(canvas, size.width - 50, 10, paint);
-    _drawFinderPattern(canvas, 10, size.height - 50, paint);
-
-    // Random QR-like blocks
-    final random = math.Random(42);
-    const blockSize = 6.0;
-    for (double x = 12; x < size.width - 12; x += blockSize + 2) {
-      for (double y = 12; y < size.height - 12; y += blockSize + 2) {
-        if ((x < 55 && y < 55) ||
-            (x > size.width - 55 && y < 55) ||
-            (x < 55 && y > size.height - 55)) {
-          continue;
-        }
-        if (random.nextBool()) {
-          canvas.drawRRect(
-            RRect.fromRectAndRadius(
-              Rect.fromLTWH(x, y, blockSize, blockSize),
-              const Radius.circular(1.5),
-            ),
-            paint,
-          );
-        }
-      }
-    }
-  }
-
-  void _drawFinderPattern(Canvas canvas, double x, double y, Paint paint) {
-    canvas.drawRRect(
-      RRect.fromRectAndRadius(
-        Rect.fromLTWH(x, y, 40, 40),
-        const Radius.circular(6),
-      ),
-      paint,
-    );
-    final whitePaint = Paint()..color = Colors.white;
-    canvas.drawRect(Rect.fromLTWH(x + 7, y + 7, 26, 26), whitePaint);
-    canvas.drawRRect(
-      RRect.fromRectAndRadius(
-        Rect.fromLTWH(x + 12, y + 12, 16, 16),
-        const Radius.circular(3),
-      ),
-      paint,
-    );
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
